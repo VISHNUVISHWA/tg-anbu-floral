@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+# Raw asset pack and root logo copy (the site uses public/images instead)
+TG_ANBU_Floral_Assets_High_Quality/
+TG Anbu Logo.jpeg
