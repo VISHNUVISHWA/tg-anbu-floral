@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
-import { events } from "@/lib/data";
+import { events, img } from "@/lib/data";
 import { useStore } from "@/lib/store";
 import { SectionHeading } from "./ui";
 
@@ -60,6 +60,9 @@ export default function EventShowcase() {
               <Image src={e.image} alt={e.title} fill sizes="(min-width:1280px) 23vw, (min-width:1024px) 30vw, 78vw" className="object-cover transition duration-[1.4s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/20 to-transparent" />
               <span className="absolute top-5 left-5 font-serif text-5xl text-ivory/25 italic">{String(i + 1).padStart(2, "0")}</span>
+              {e.image === img.storefront && (
+                <span className="absolute top-5 right-5 rounded-full bg-charcoal/70 px-2.5 py-1 text-[0.6rem] font-semibold tracking-wider text-ivory uppercase backdrop-blur">Concept image</span>
+              )}
             </div>
             <div className="absolute inset-x-0 bottom-0 p-6 text-ivory">
               <h3 className="font-serif text-[1.9rem] leading-none">{e.title}</h3>

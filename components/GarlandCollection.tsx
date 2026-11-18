@@ -10,7 +10,7 @@ import { Reveal, Sparkle } from "./ui";
 
 export default function GarlandCollection() {
   return (
-    <section id="garlands" className="relative overflow-hidden bg-gradient-to-b from-[#F7EDE8] via-ivory to-ivory py-20 lg:py-28" aria-labelledby="gar-title">
+    <section id="garlands" className="relative overflow-clip bg-gradient-to-b from-[#F7EDE8] via-ivory to-ivory py-20 lg:py-28" aria-labelledby="gar-title">
       <div className="pointer-events-none absolute top-20 -right-40 h-[500px] w-[500px] rounded-full bg-blush/50 blur-[130px]" />
       <div className="container-lux relative grid gap-12 lg:grid-cols-12 lg:gap-14">
         {/* Intro (sticky on desktop) */}

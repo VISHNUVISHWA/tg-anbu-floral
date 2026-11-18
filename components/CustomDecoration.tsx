@@ -77,7 +77,7 @@ export default function CustomDecoration() {
           </div>
           <div className="absolute -bottom-8 -left-4 w-[46%] overflow-hidden rounded-[1.5rem] border-[6px] border-forest shadow-2xl sm:-left-10">
             <div className="relative aspect-square">
-              <Image src={img.mandapPillar} alt="Detail of traditional striped floral stage work" fill sizes="260px" className="object-cover" />
+              <Image src={img.mandapHall} alt="Grand decorated wedding stage hall" fill sizes="260px" className="object-cover" />
             </div>
           </div>
           <div className="glass-dark absolute top-10 -right-2 flex items-center gap-3 rounded-2xl border border-ivory/15 p-4 sm:-right-8">

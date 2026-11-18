@@ -11,7 +11,9 @@ export default function FAQ() {
   return (
     <section id="faq" className="bg-cream/70 py-20 lg:py-28" aria-labelledby="faq-title">
       <div className="container-lux grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-4">
+        {/* Right column: stays pinned while the questions on the left scroll (desktop) */}
+        <div className="lg:order-2 lg:col-span-4">
+          <div className="lg:sticky lg:top-28">
           <div id="faq-title">
             <SectionHeading eyebrow="Questions" title={<>Good to <em className="text-emerald">Know</em></>} subtitle="Quick answers to what customers ask us most. Can’t find yours? We’re a message away." />
           </div>
@@ -27,9 +29,10 @@ export default function FAQ() {
               </a>
             </div>
           </Reveal>
+          </div>
         </div>
 
-        <div className="lg:col-span-8">
+        <div className="lg:order-1 lg:col-span-8">
           <ul className="divide-y divide-forest/10 border-y border-forest/10">
             {faqs.map((f, i) => {
               const isOpen = open === i;

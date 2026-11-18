@@ -35,16 +35,10 @@ export const waLink = (text: string) =>
 export const img = {
   // T.G ANBU's own work & brand
   heroStage: own("stage-arch-wide"),
-  garlandStrands: own("garland-strands"),
+  heroConcept: own("hero-concept-stage"), // AI-generated concept image, labelled on the site
   namingGreen: own("naming-ceremony-green"),
-  storefront: own("inauguration-storefront"),
+  storefront: own("storefront-concept"), // AI-generated concept image, labelled on the site
   emblem: own("tg-anbu-emblem"),
-  archDetail: own("crop-arch-detail"),
-  sideBouquet: own("crop-side-bouquet"),
-  floorArrangement: own("crop-floor-arrangement"),
-  mandapCanopy: own("crop-mandap-canopy"),
-  strandTexture: own("crop-garland-strands-texture"),
-  mandapPillar: own("crop-mandap-pillar"),
 
   // Supporting library photography (see public/images/credits.json)
   darkBouquet: lib("dark-bouquet"),
@@ -297,7 +291,7 @@ export const garlands: Product[] = [
     price: 999,
     rating: 4.8,
     reviews: 90,
-    image: img.garlandStrands,
+    image: img.redRoses,
     description: "Velvety rose heads strung close and edged with jasmine.",
     details: ["4 ft", "Fresh red roses", "Jasmine border"],
   },
@@ -333,7 +327,7 @@ export const garlands: Product[] = [
     price: 3499,
     rating: 5.0,
     reviews: 47,
-    image: img.mandapCanopy,
+    image: img.marigoldGarland,
     badge: "Bridal",
     description: "Layered stripes of rose, crossandra and jasmine — colour-matched to the bridal saree.",
     details: ["Pair", "Palette-matched", "48 hrs notice"],
@@ -426,8 +420,8 @@ export const megaMenus: MegaMenu[] = [
         title: "Wedding & Bridal",
         links: [
           { label: "Wedding Garlands", image: img.marigoldClose, href: "#garlands" },
-          { label: "Bridal Garlands", image: img.mandapCanopy, href: "#garlands" },
-          { label: "Groom Garlands", image: img.garlandStrands, href: "#garlands" },
+          { label: "Bridal Garlands", image: img.marigoldGarland, href: "#garlands" },
+          { label: "Groom Garlands", image: img.jasmineWhite, href: "#garlands" },
           { label: "Reception Garlands", image: img.nightJasmine, href: "#garlands" },
           { label: "Varmala", image: img.marigoldGarland, href: "#garlands" },
           { label: "Custom Garlands", image: img.handsStringing, enquiry: "Custom Garlands" },
@@ -437,7 +431,7 @@ export const megaMenus: MegaMenu[] = [
         title: "By Style",
         links: [
           { label: "Traditional Garlands", image: img.marigoldHanging, href: "#garlands" },
-          { label: "Rose Garlands", image: img.strandTexture, href: "#garlands" },
+          { label: "Rose Garlands", image: img.redRoses, href: "#garlands" },
           { label: "Jasmine Garlands", image: img.jasmineGarlandTN, href: "#garlands" },
           { label: "Mixed Flower Garlands", image: img.flowerMarket, href: "#garlands" },
           { label: "Temple Garlands", image: img.jasmineWhite, href: "#garlands" },
@@ -464,21 +458,21 @@ export const megaMenus: MegaMenu[] = [
         links: [
           { label: "Wedding Stage Decoration", image: img.mandapHall, enquiry: "Wedding Stage Decoration" },
           { label: "Reception Stage", image: img.receptionCouple, enquiry: "Reception Stage" },
-          { label: "Mandap Decoration", image: img.mandapCanopy, enquiry: "Mandap Decoration" },
+          { label: "Mandap Decoration", image: img.southIndianWedding, enquiry: "Mandap Decoration" },
           { label: "Bride & Groom Stage", image: img.heroStage, enquiry: "Bride & Groom Stage" },
-          { label: "Floral Backdrops", image: img.archDetail, enquiry: "Floral Backdrops" },
+          { label: "Floral Backdrops", image: img.namingGreen, enquiry: "Floral Backdrops" },
           { label: "Engagement Decoration", image: img.engagementHands, enquiry: "Engagement Decoration" },
         ],
       },
       {
         title: "Details & Arrivals",
         links: [
-          { label: "Wedding Entrance", image: img.sideBouquet, enquiry: "Wedding Entrance" },
+          { label: "Wedding Entrance", image: img.vaseArrangement, enquiry: "Wedding Entrance" },
           { label: "Wedding Aisle", image: img.weddingAisle, enquiry: "Wedding Aisle" },
           { label: "Car Decoration", image: img.pinkRosesVase, enquiry: "Wedding Car Decoration" },
           { label: "Wedding Welcome Board", image: img.gardenChairs, enquiry: "Wedding Welcome Board" },
-          { label: "Wedding Floral Decoration", image: img.floorArrangement, enquiry: "Wedding Floral Decoration" },
-          { label: "Traditional Wedding Decoration", image: img.mandapCanopy, enquiry: "Traditional Wedding Decoration" },
+          { label: "Wedding Floral Decoration", image: img.dahlias, enquiry: "Wedding Floral Decoration" },
+          { label: "Traditional Wedding Decoration", image: img.southIndianWedding, enquiry: "Traditional Wedding Decoration" },
         ],
       },
     ],
@@ -509,7 +503,7 @@ export const megaMenus: MegaMenu[] = [
           { label: "Engagement", image: img.engagementHands, enquiry: "Engagement Decoration" },
           { label: "Naming Ceremony", image: img.namingGreen, enquiry: "Naming Ceremony Decoration" },
           { label: "Housewarming", image: img.lotusPink, enquiry: "Housewarming Decoration" },
-          { label: "Stage Decoration", image: img.mandapPillar, enquiry: "Stage Decoration" },
+          { label: "Stage Decoration", image: img.mandapHall, enquiry: "Stage Decoration" },
         ],
       },
       {
@@ -520,7 +514,7 @@ export const megaMenus: MegaMenu[] = [
           { label: "College Events", image: img.eventHall, enquiry: "College Event Decoration" },
           { label: "Political Events", image: img.marigoldHanging, enquiry: "Political Event Decoration" },
           { label: "Award Functions", image: img.receptionTable, enquiry: "Award Function Decoration" },
-          { label: "Event Entrance Decoration", image: img.archDetail, enquiry: "Event Entrance Decoration" },
+          { label: "Event Entrance Decoration", image: img.weddingAisle, enquiry: "Event Entrance Decoration" },
         ],
       },
     ],
@@ -583,7 +577,7 @@ export const categories = [
   { title: "Wedding Decoration", desc: "Mandaps, stages & entrances styled end to end.", image: img.southIndianWedding, href: "#wedding", size: "std" },
   { title: "Reception Decoration", desc: "Glamorous stages and tablescapes for the big night.", image: img.receptionTable, href: "#wedding", size: "std" },
   { title: "Event Decoration", desc: "Birthdays, openings, corporate & family functions.", image: img.eventHall, href: "#events", size: "std" },
-  { title: "Stage Decoration", desc: "Statement floral stages built for the spotlight.", image: img.mandapPillar, href: "#events", size: "tall" },
+  { title: "Stage Decoration", desc: "Statement floral stages built for the spotlight.", image: img.mandapHall, href: "#events", size: "tall" },
   { title: "Floral Backdrops", desc: "Green walls, arches & photo-ready floral frames.", image: img.namingGreen, href: "#gallery", size: "wide" },
   { title: "Custom Floral Designs", desc: "Your colours, your concept — crafted from scratch.", image: img.bouquetHand, href: "#custom", size: "std" },
 ] as const;
@@ -593,12 +587,12 @@ export const categories = [
 /* ------------------------------------------------------------------ */
 export const weddingShowcase = [
   { title: "Wedding Stage Decoration", note: "Grand hall stage with layered florals", image: img.mandapHall },
-  { title: "Floral Entrance Arches", note: "Rose & carnation arch", image: img.archDetail },
+  { title: "Floral Entrance Arches", note: "Rose & carnation arch", image: img.heroStage },
   { title: "Reception Stage", note: "Evening glamour, floral wall", image: img.receptionCouple },
-  { title: "Bride & Groom Stage", note: "Gilded seat, tropical florals", image: img.floorArrangement },
-  { title: "Mandap Decoration", note: "Traditional striped flower mandap", image: img.mandapCanopy },
+  { title: "Bride & Groom Stage", note: "Styled for the couple's big moment", image: img.bride },
+  { title: "Mandap Decoration", note: "Traditional ritual setting with garlands", image: img.southIndianWedding },
   { title: "Wedding Aisle Decoration", note: "Petal-lined aisle with urns", image: img.weddingAisle },
-  { title: "Traditional Floral Arrangements", note: "Rose, crossandra & jasmine strand work", image: img.strandTexture },
+  { title: "Traditional Floral Arrangements", note: "Roses & seasonal blooms in classic vases", image: img.pinkRosesVase },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -612,7 +606,7 @@ export const events = [
   { title: "Housewarming Ceremonies", desc: "Toran, lotus & pooja florals for griha pravesam.", image: img.lotusPink },
   { title: "Corporate Events", desc: "Polished florals for launches & conferences.", image: img.banquetTable },
   { title: "Grand Openings", desc: "Storefront garlands & ribbon-cutting arches.", image: img.storefront },
-  { title: "Stage Decoration", desc: "Statement stages for functions & felicitations.", image: img.mandapPillar },
+  { title: "Stage Decoration", desc: "Statement stages for functions & felicitations.", image: img.mandapHall },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -630,17 +624,17 @@ export const customServices = [
 /* ------------------------------------------------------------------ */
 /* Gallery (section 11)                                                */
 /* ------------------------------------------------------------------ */
-export const gallery = [
-  { src: img.heroStage, title: "Luxury Floral Stage", caption: "Rose arch, gilded seat & tropical arrangements" },
-  { src: img.southIndianWedding, title: "Traditional Indian Wedding", caption: "Garlands, kolam florals & ritual décor" },
+export const gallery: { src: string; title: string; caption: string; concept?: boolean }[] = [
+  { src: img.heroStage, title: "Luxury Floral Stage", caption: "Rose arch, gilded seat & candle pillars" },
   { src: img.darkBouquet, title: "Rose Arrangements", caption: "Moody, deep-toned rose work" },
-  { src: img.archDetail, title: "Floral Arches", caption: "Dense rose and carnation arch" },
-  { src: img.namingGreen, title: "Green Backdrop Stage", caption: "Grass wall, white roses & cradle" },
   { src: img.receptionTable, title: "Reception Decorations", caption: "Long-table florals & candlelight" },
   { src: img.marigoldHanging, title: "Flower Garlands", caption: "Marigold & jasmine strands" },
-  { src: img.storefront, title: "Event Entrance Decoration", caption: "Storefront inauguration garland" },
-  { src: img.sideBouquet, title: "Stage Floral Accents", caption: "Heliconia, lily & rose arrangement" },
+  { src: img.mixedBouquet, title: "Stage Floral Accents", caption: "Garden roses & lisianthus" },
   { src: img.weddingHands, title: "Wedding Rituals", caption: "Florals that frame every ritual" },
+  { src: img.namingGreen, title: "Green Backdrop Stage", caption: "Grass wall, white roses & cradle" },
+  { src: img.weddingAisle, title: "Floral Arches", caption: "Floral aisle framed by an arch" },
+  { src: img.southIndianWedding, title: "Traditional Indian Wedding", caption: "Garlands, kolam florals & ritual décor" },
+  { src: img.storefront, title: "Event Entrance Decoration", caption: "Concept illustration (AI-generated) of a flower-dressed entrance", concept: true },
 ];
 
 /* ------------------------------------------------------------------ */

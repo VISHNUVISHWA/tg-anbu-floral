@@ -95,10 +95,13 @@ export default function Hero() {
           >
             <motion.div style={{ y: imgY }} className="absolute -inset-y-[8%] inset-x-0">
               <motion.div initial={reduce ? false : { scale: 1.25 }} animate={{ scale: 1 }} transition={{ duration: 2.2, ease, delay: 0.2 }} className="absolute inset-0">
-                <Image src={img.heroStage} alt="Luxury rose arch wedding stage with gilded seat, decorated by T.G ANBU" fill priority sizes="(min-width:1024px) 560px, 100vw" className="object-cover object-[50%_45%]" />
+                <Image src={img.heroConcept} alt="Concept illustration of a rose-arch wedding stage with a gilded seat" fill priority sizes="(min-width:1024px) 560px, 100vw" className="object-cover object-[50%_45%]" />
               </motion.div>
             </motion.div>
             <div className="absolute inset-0 bg-gradient-to-t from-forest/40 via-transparent to-transparent" />
+            <span className="absolute bottom-4 left-4 rounded-full bg-charcoal/70 px-3 py-1 text-[0.65rem] font-semibold tracking-wider text-ivory uppercase backdrop-blur">
+              Concept image · AI-generated
+            </span>
           </motion.div>
 
           {/* arch outline accent */}
@@ -138,7 +141,7 @@ export default function Hero() {
 
           {/* small round detail image */}
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.1, ease, delay: 1.45 }} className="absolute right-2 -bottom-10 hidden h-36 w-36 overflow-hidden rounded-full border-[6px] border-ivory shadow-2xl sm:block lg:-right-4">
-            <Image src={img.sideBouquet} alt="Detail of a tropical floral stage arrangement" fill sizes="144px" className="object-cover" />
+            <Image src={img.vaseArrangement} alt="Fresh floral arrangement in a glass vase" fill sizes="144px" className="object-cover" />
           </motion.div>
 
           <Sparkle className="absolute top-1/3 -right-3 h-6 w-6 animate-shimmer text-gold" />

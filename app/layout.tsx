@@ -45,8 +45,20 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${cormorant.variable} ${manrope.variable}`} suppressHydrationWarning>
+      <head>
+        {process.env.NODE_ENV !== "production" && (
+          // Dev only: some browser extensions (autofill/form helpers) add `fdprocessedid`
+          // attributes to buttons before React hydrates, which triggers a false hydration
+          // warning. Strip them as they appear so the dev overlay stays clean.
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){var a='fdprocessedid';function s(n){if(n.nodeType===1){n.removeAttribute(a);var c=n.querySelectorAll('['+a+']');for(var i=0;i<c.length;i++)c[i].removeAttribute(a)}}new MutationObserver(function(m){m.forEach(function(r){if(r.type==='attributes')r.target.removeAttribute(a);else r.addedNodes.forEach(s)})}).observe(document,{attributes:true,attributeFilter:[a],childList:true,subtree:true})})();`,
+            }}
+          />
+        )}
+      </head>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
